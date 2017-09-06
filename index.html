@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   	<meta charset="UTF-8"/>
-	<script type="text/javascript" src="http://mastergiac.github.io/jszip/test/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="https://mastergiac.github.io/jszip/test/jquery-1.8.3.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="http://mastergiac.github.io/jszip/dist/jszip.js"></script>
-	<script type="text/javascript" src="http://mastergiac.github.io/jszip-utils/dist/jszip-utils.js"></script>
-	<script type="text/javascript" src="http://mastergiac.github.io/jszip/vendor/FileSaver.js"></script>
+	<script type="text/javascript" src="https://mastergiac.github.io/jszip/dist/jszip.js"></script>
+	<script type="text/javascript" src="https://mastergiac.github.io/jszip-utils/dist/jszip-utils.js"></script>
+	<script type="text/javascript" src="https://mastergiac.github.io/jszip/vendor/FileSaver.js"></script>
 </head>
 <body>
 	<h3>Choose the local(s) zip file(s)</h3>
@@ -34,83 +34,91 @@
 
 		    // Closure to capture the file information.
 		    function handleFile(f) {
-				var promise = new JSZip.external.Promise(function (resolve, reject) {
-				    JSZipUtils.getBinaryContent(f, function(err, data) {
-				        if (err) {
-				            reject(err);
-				        } else {
-				            resolve(data);
-				        }
-				    });
-				});
+                if (typeof(f) == "string") {
+    				var promise = new JSZip.external.Promise(function (resolve, reject) {
+    				    JSZipUtils.getBinaryContent(f, function(err, data) {
+    				        if (err) {
+    				            reject(err);
+    				        } else {
+    				            resolve(data);
+    				        }
+    				    });
+    				});
+                    var $title = $("<h4>", {
+                        text : f.name
+                    });
+                    var $fileContent = $("<ul>");
+                    $result.append($title);
+                    $result.append($fileContent);
 
-				promise.then(JSZip.loadAsync)                     // 2) chain with the zip promise
-				.then(function(zip) {
-				    return zip.file("Hello.txt").async("string"); // 3) chain with the text content promise
-				})
-				.then(function success(text) {                    // 4) display the result
-				    $result.append($("<p>", {
-				        "class": "alert alert-success",
-				        text: "loaded, content = " + text
-				    }));
-				}, function error(e) {
-				    $result.append($("<p>", {
-				        "class": "alert alert-danger",
-				        text: e
-				    }));
-				});
-		        // var $title = $("<h4>", {
-		        //     text : f.name
-		        // });
-		        // var $fileContent = $("<ul>");
-		        // $result.append($title);
-		        // $result.append($fileContent);
-				//
-		        // var dateBefore = new Date();
-		        // JSZip.loadAsync(f)                                   // 1) read the Blob
-		        // .then(function(zip) {
-		        //     var dateAfter = new Date();
-		        //     $title.append($("<span>", {
-		        //         "class": "small",
-		        //         text:" (loaded in " + (dateAfter - dateBefore) + "ms)"
-		        //     }));
-				//
-		        //     zip.forEach(function (relativePath, zipEntry) {  // 2) print entries
-		        //         $fileContent.append($("<li>", {
-		        //             text : zipEntry.name
-		        //         }));
-		        //     });
-		        // }, function (e) {
-		        //     $result.append($("<div>", {
-		        //         "class" : "alert alert-danger",
-		        //         text : "Error reading " + f.name + ": " + e.message
-		        //     }));
-		        // });
+    				promise.then(JSZip.loadAsync)                     // 2) chain with the zip promise
+    				.then(function(zip) {
+                        zip.forEach(function (relativePath, zipEntry) {  // 2) print entries
+                            if (zipEntry.dir == false) {
+                                $fileContent.append($("<li>", {
+                                    text : zipEntry.name
+                                }));
+                                zipEntry.async("blob").then(function success(content) {
+                                    // use the content
+                                    console.log(content);
+                                    var file = new File([content], zipEntry.name, {type: "zip", lastModified: Date.now()});
+                                    console.log(file);
+                                    window.localStorage.setItem(zipEntry.name, file);
+                                    handleFile(file);
+                                }, function error(e) {
+                                    // handle the error
+                                });
+                            }
+                        });
+    				    // return zip.file("Hello.txt").async("string"); // 3) chain with the text content promise
+    				}, function error(e) {
+    				    $result.append($("<p>", {
+    				        "class": "alert alert-danger",
+    				        text: e
+    				    }));
+    				});
+                } else {
+
+                    JSZip.loadAsync(f)                                   // 1) read the Blob
+                    .then(function(zip) {
+                        var $title = $("<h4>", {
+                            text : f.name
+                        });
+                        var $fileContent = $("<ul>");
+                        $result.append($title);
+                        $result.append($fileContent);
+
+
+                        zip.forEach(function (relativePath, zipEntry) {  // 2) print entries
+                            if (zipEntry.dir == false) {
+                                $fileContent.append($("<li>", {
+                                    text : zipEntry.name
+                                }));
+                                zipEntry.async("blob").then(function success(content) {
+                                    // use the content
+                                    console.log(content);
+                                    var file = new File([content], zipEntry.name, {type: "zip", lastModified: Date.now()});
+                                    console.log(file);
+                                    window.localStorage.setItem(zipEntry.name, file);
+                                    handleFile(file);
+                                }, function error(e) {
+                                    // handle the error
+                                });
+                            }
+                        });
+                    }, function (e) {
+                        $result.append($("<div>", {
+                            "class" : "alert alert-danger",
+                            text : "Error reading " + f.name + ": " + e.message
+                        }));
+                    });
+
+                }
 		    }
 
-			// $.get("http://mastergiac.github.io/jszip/test/ref/text.zip",
-			// 	function(html) {
-			// 		alert(html);
-			// 		handleFile(html);
-			// 	}
-			// );
-			// handleFile("http://mastergiac.github.io/jszip/test/ref/42_un_enc.zip");
-			// handleFile("http://mastergiac.github.io/jszip/test/ref/text.zip");
-
-			// alert("a");
-			// var x = new File("http://127.0.0.1/~kevinm/42_un_enc.zip");
-			// alert(x);
-			// handleFile(x);
-		    // var files = evt.target.files;
-		    // for (var i = 0; i < files.length; i++) {
-			// 	alert(files[i]);
-		    //     handleFile(files[i]);
-		    // }
-
-
-
 			// handleFile('http://stuk.github.io/jszip/test/ref/text.zip');
-			handleFile("http://mastergiac.github.io/jszip/test/ref/text.zip");
+			// handleFile("https://mastergiac.github.io/jszip/test/ref/text.zip");
+            handleFile("https://mastergiac.github.io/jszip/test/ref/42_un_enc.zip");
 		});
 
 
