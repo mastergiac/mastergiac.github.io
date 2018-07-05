@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<VAST version="2.0">
+    <Ad id="KMKar169Pug">
+        <InLine>
+            <AdSystem>Kar_16_9</AdSystem>
+            <AdTitle>Bill 16 9 Pug</AdTitle>
+            <Creatives>
+                <Creative>
+                    <Linear>
+                        <Duration>00:00:15</Duration>
+                        <TrackingEvents>
+                            <Tracking event="start">
+                                <![CDATA[https://kmv-tags.herokuapp.com/start?adtype=Bill169v]]>
+                            </Tracking>
+                            <Tracking event="firstQuartile">
+                                <![CDATA[https://kmv-tags.herokuapp.com/firstQuartile?adtype=Bill169v]]>
+                            </Tracking>
+                            <Tracking event="midpoint">
+                                <![CDATA[https://kmv-tags.herokuapp.com/midpoint?adtype=Bill169v]]>
+                            </Tracking>
+                            <Tracking event="thirdQuartile">
+                                <![CDATA[https://kmv-tags.herokuapp.com/thirdQuartile?adtype=Bill169v]]>
+                            </Tracking>
+                            <Tracking event="complete">
+                                <![CDATA[https://kmv-tags.herokuapp.com/complete?adtype=Bill169v]]>
+                            </Tracking>
+                        </TrackingEvents>
+                        <VideoClicks>
+                            <ClickThrough>
+                                <![CDATA[https://theshelterpetproject.org]]>
+                            </ClickThrough>
+                            <ClickTracking>
+                                <![CDATA[https://kmv-tags.herokuapp.com/click?adtype=Bill169v]]>
+                            </ClickTracking>
+                        </VideoClicks>
+                        <MediaFiles>
+                            <MediaFile height="450" width="800" bitrate="445" type="video/mp4" delivery="progressive">
+                                <![CDATA[https://almostemptyplates.com/demo_16_9.mp4]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VAST version="3.0" xmlns:MM="http://api.mediamind.com/V1/DataContracts">
+    <Ad id="12345">
+        <InLine>
+            <AdSystem>
+                <![CDATA[KMSiz169]]>
+            </AdSystem>
+            <AdTitle>
+                <![CDATA[KMSiz169_15s_1080x1080]]>
+            </AdTitle>
+            <Description>
+                <![CDATA[KMSiz169_15s_1080x1080]]>
+            </Description>
+            <Impression id="Impression">
+                <![CDATA[https://kmv-tags.herokuapp.com/impression?adtype=KMSiz169]]>
+            </Impression>
+            <Creatives>
+                <Creative id="1234" adid="1234" sequence="1">
+                    <Linear skipoffset="00:00:05">
+                        <Duration>00:00:12</Duration>
+                        <TrackingEvents>
+                            <Tracking event="creativeView">
+                                <![CDATA[https://kmv-tags.herokuapp.com/creativeView?adtype=KMSiz169]]>
+                            </Tracking>
+                            <Tracking event="creativeView">
+                                <![CDATA[https://kmv-tags.herokuapp.com/creativeView?adtype=KMSiz169]]>
+                            </Tracking>
+                            <Tracking event="start">
+                                <![CDATA[https://kmv-tags.herokuapp.com/start?adtype=KMSiz169]]>
+                            </Tracking>
+                            <Tracking event="skip">
+                                <![CDATA[https://kmv-tags.herokuapp.com/skip?adtype=KMSiz169]]>
+                            </Tracking>
+                            <Tracking event="progress" offset="00:00:30.000">
+                                <![CDATA[https://kmv-tags.herokuapp.com/progress?adtype=KMSiz169]]>
+                            </Tracking>
+                            <Tracking event="firstQuartile">
+                                <![CDATA[https://kmv-tags.herokuapp.com/firstQuartile?adtype=KMSiz169]]>
+                            </Tracking>
+                            <Tracking event="midpoint">
+                                <![CDATA[https://kmv-tags.herokuapp.com/midpoint?adtype=KMSiz169]]>
+                            </Tracking>
+                            <Tracking event="thirdQuartile">
+                                <![CDATA[https://kmv-tags.herokuapp.com/thirdQuartile?adtype=KMSiz169]]>
+                            </Tracking>
+                            <Tracking event="complete">
+                                <![CDATA[https://kmv-tags.herokuapp.com/complete?adtype=KMSiz169]]>
+                            </Tracking>
+                            <Tracking event="mute">
+                                <![CDATA[https://kmv-tags.herokuapp.com/mute?adtype=KMSiz169]]>
+                            </Tracking>
+                            <Tracking event="unmute">
+                                <![CDATA[https://kmv-tags.herokuapp.com/unmute?adtype=KMSiz169]]>
+                            </Tracking>
+                            <Tracking event="pause">
+                                <![CDATA[https://kmv-tags.herokuapp.com/pause?adtype=KMSiz169]]>
+                            </Tracking>
+                            <Tracking event="fullscreen">
+                                <![CDATA[https://kmv-tags.herokuapp.com/fullscreen?adtype=KMSiz169]]>
+                            </Tracking>
+                        </TrackingEvents>
+                        <VideoClicks>
+                            <ClickThrough>
+                                <![CDATA[https://kmv-tags.herokuapp.com/click?adtype=KMSiz169]]>
+                            </ClickThrough>
+                        </VideoClicks>
+                        <MediaFiles>
+                            <MediaFile id="339678260" height="1920" width="1080" bitrate="5000" type="video/mp4" delivery="progressive" maintainAspectRatio="true" scalable="true">
+                                <![CDATA[https://secure-ds.serving-sys.com/BurstingRes/Site-131550/Type-16/4820d9d2-7ced-476a-b555-c869fdac36e8.mp4]]>
+                            </MediaFile>
+                            <MediaFile id="339678261" height="666" width="640" bitrate="767" type="video/mp4" delivery="progressive" maintainAspectRatio="true" scalable="true">
+                                <![CDATA[https://secure-ds.serving-sys.com/BurstingRes/Site-131550/Type-16/3f643d6b-a55e-43b2-b675-eb14e26ad011.mp4]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+                <Creative id="1234" adid="1234" sequence="1">
+                    <CompanionAds></CompanionAds>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>

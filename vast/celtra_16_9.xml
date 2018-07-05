@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<VAST version="2.0">
+    <Ad id="d2817d4f">
+        <InLine>
+            <AdSystem> <![CDATA[KMTester C 16 9]]> </AdSystem>
+            <AdTitle> <![CDATA[C 16 9 Ad]]> </AdTitle>
+            <Description> <![CDATA[C 16 9 VAST]]> </Description>
+            <Error><![CDATA[https://kmv-tags.herokuapp.com/error?adtype=Celt169v]]></Error>
+            <Impression>
+                <![CDATA[https://kmv-tags.herokuapp.com/impression?adtype=Celt169v]]>
+            </Impression>
+            <Creatives>
+                <Creative sequence="1" id="d2817d4f" AdID="d2817d4f">
+                    <Linear>
+                        <Duration>00:00:11</Duration>
+                        <TrackingEvents>
+                            <Tracking event="creativeView">
+                                <![CDATA[https://kmv-tags.herokuapp.com/creativeView?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="start">
+                                <![CDATA[https://kmv-tags.herokuapp.com/start?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="start">
+                                <![CDATA[https://kmv-tags.herokuapp.com/start?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="firstQuartile">
+                                <![CDATA[https://kmv-tags.herokuapp.com/firstQuartile?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="midpoint">
+                                <![CDATA[https://kmv-tags.herokuapp.com/midpoint?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="thirdQuartile">
+                                <![CDATA[https://kmv-tags.herokuapp.com/thirdQuartile?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="complete">
+                                <![CDATA[https://kmv-tags.herokuapp.com/complete?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="close">
+                                <![CDATA[https://kmv-tags.herokuapp.com/close?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="mute">
+                                <![CDATA[https://kmv-tags.herokuapp.com/mute?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="unmute">
+                                <![CDATA[https://kmv-tags.herokuapp.com/error?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="pause">
+                                <![CDATA[https://kmv-tags.herokuapp.com/pause?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="rewind">
+                                <![CDATA[https://kmv-tags.herokuapp.com/rewind?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="resume">
+                                <![CDATA[https://kmv-tags.herokuapp.com/resume?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="fullscreen">
+                                <![CDATA[https://kmv-tags.herokuapp.com/fullscreen?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="expand">
+                                <![CDATA[https://kmv-tags.herokuapp.com/expand?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="collapse">
+                                <![CDATA[https://kmv-tags.herokuapp.com/collapse?adtype=Celt169v]]>
+                            </Tracking>
+                            <Tracking event="acceptInvitation">
+                                <![CDATA[https://kmv-tags.herokuapp.com/acceptInvitation?adtype=Celt169v]]>
+                            </Tracking>
+                        </TrackingEvents>
+                        <VideoClicks>
+                            <ClickThrough><![CDATA[?]]></ClickThrough>
+                            <ClickTracking>
+                                <![CDATA[https://kmv-tags.herokuapp.com/click?adtype=Celt169v]]>
+                            </ClickTracking>
+                        </VideoClicks>
+                        <MediaFiles>
+                            <MediaFile type="video/mp4" delivery="progressive" bitrate="696" width="640" height="360" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/0235486012432ca69fc41b7051c2069a647581da03516db839ad7ccc885ed993/Video.mp4?]]>
+                            </MediaFile>
+                            <MediaFile type="video/3gp" delivery="progressive" bitrate="78" width="176" height="144" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/d0c273d5c4439c123e84730ce7e250b7d2d846f7ba3d71f2f33573d1a57f8842/Video.3gp?]]>
+                            </MediaFile>
+                            <MediaFile type="video/3gp" delivery="progressive" bitrate="250" width="320" height="180" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/6ff49999b89d03d87571c55bf3ac9bc08667b79a59468e1557d7a458da27daca/Video.3gp?]]>
+                            </MediaFile>
+                            <MediaFile type="video/mp4" delivery="progressive" bitrate="495" width="480" height="270" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/9644518730f175eb8700af5c7b6e28df436fb8e510c724a62b82ef13ac280720/Video.mp4?]]>
+                            </MediaFile>
+                            <MediaFile type="video/mp4" delivery="progressive" bitrate="496" width="640" height="360" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/73f9db0ecd214ba09b727dfbce74f4629c5cc1effc5c29ec7c25fc67496dcb0d/Video.mp4?]]>
+                            </MediaFile>
+                            <MediaFile type="video/mp4" delivery="progressive" bitrate="1100" width="640" height="360" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/6a9f1f7374fb291655627cb95e649731ad52ad9f945f2453c2322906d1d4fc9f/Video.mp4?]]>
+                            </MediaFile>
+                            <MediaFile type="video/mp4" delivery="progressive" bitrate="1632" width="640" height="360" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/f2067f5c535806765e5147c1516a23245021ba25b9778c4ecc6731aa86dbf9fc/Video.mp4?]]>
+                            </MediaFile>
+                            <MediaFile type="video/mp4" delivery="progressive" bitrate="814" width="720" height="406" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/c3a8b1dd9c7472cb077d7566af79edfc4085e30a06107a2d5cf8b8903a4aa728/Video.mp4?]]>
+                            </MediaFile>
+                            <MediaFile type="video/mp4" delivery="progressive" bitrate="1126" width="854" height="482" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/ce6aa4b52c1a16abf7858180d479f8e29e3dc26cb02e04b15f6e81941e2268f5/Video.mp4?]]>
+                            </MediaFile>
+                            <MediaFile type="video/mp4" delivery="progressive" bitrate="1619" width="1024" height="576" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/7040e490bf02edf7a47c9eb8e110e866c53fb550fdb4b823359e32b667451e64/Video.mp4?]]>
+                            </MediaFile>
+                            <MediaFile type="video/mp4" delivery="progressive" bitrate="2248" width="1280" height="720" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/6a0d871313cf5f7d3aedf941def09b5b6f32a626ff55acbfc612282a54389134/Video.mp4?]]>
+                            </MediaFile>
+                            <MediaFile type="video/mp4" delivery="progressive" bitrate="4344" width="1920" height="1080" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/2c9d28e5c5736862248a0adbf97b234b76cab21bc04fa6b7f588b91ce1671c61/Video.mp4?]]>
+                            </MediaFile>
+                            <MediaFile type="video/webm" delivery="progressive" bitrate="570" width="640" height="360" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/224fc80528132e249e2a7b2a73aa2d85cfcc291e257b61108f850c1d61eedefd/Video.webm?]]>
+                            </MediaFile>
+                            <MediaFile type="video/webm" delivery="progressive" bitrate="1098" width="854" height="482" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/82dcbf649c5b7915e5473c13d535abcc255c6014eb5d66eae2a7d9f67b33ac96/Video.webm?]]>
+                            </MediaFile>
+                            <MediaFile type="video/webm" delivery="progressive" bitrate="2196" width="1280" height="720" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/9f0dc659c95e68cf38d9124041fceb5908dcbda8b0e13b27305bc8d48cc69745/Video.webm?]]>
+                            </MediaFile>
+                            <MediaFile type="video/webm" delivery="progressive" bitrate="4243" width="1920" height="1080" scalable="true" maintainAspectRatio="false">
+                                <![CDATA[https://cache-ssl.celtra.com/api/blobs/378fbe85c56efe78bbb6d320f1ad3d07e3b47649dbbe48172a83d804d100a1ad/Video.webm?]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+            <Extensions>
+                <Extension>
+                    <CustomTracking event="engagedView">
+                        <![CDATA[https://track.celtra.com/json/eyJldmVudHMiOlt7InNlc3Npb25JZCI6InMxNTE1NjI3MTI1eDk5ZmNkZGQyYmZlODdheDI4MjEzMjcxIiwiYWNjb3VudElkIjoiNGE4ZWJkNjciLCJzdHJlYW0iOiJhZEV2ZW50cyIsIm5hbWUiOiJ2YXN0RW5nYWdlZFZpZXcifV19?md5=a5f409aca9aa6440dbbe3b7499624561&]]>
+                    </CustomTracking>
+                </Extension>
+            </Extensions>
+        </InLine>
+    </Ad>
+</VAST>
