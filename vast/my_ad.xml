@@ -1,0 +1,76 @@
+<VAST xmlns:MM="http://api.mediamind.com/V1/DataContracts" version="2.0">
+    <Ad id="67201801">
+        <InLine>
+            <AdSystem>
+                <![CDATA[ MediaMind ]]>
+            </AdSystem>
+            <AdTitle>
+                <![CDATA[ MyAd_1920x1080 ]]>
+            </AdTitle>
+            <Description>
+                <![CDATA[ MyAd_1920x1080 ]]>
+            </Description>
+            <Impression id="Impression">
+                <![CDATA[https://kmv-tags.herokuapp.com/impression?adtype=VGA5441T130_YouTube_1920x1080]]>
+            </Impression>
+            <Creatives>
+                <Creative id="67201801" AdID="67201801" sequence="1">
+                    <Linear>
+                        <Duration>00:00:10</Duration>
+                        <TrackingEvents>
+                            <Tracking event="creativeView">
+                                <![CDATA[https://kmv-tags.herokuapp.com/creativeView?adtype=VGA5441T130_YouTube_1920x1080]]>
+                            </Tracking>
+                            <Tracking event="creativeView">
+                                <![CDATA[https://kmv-tags.herokuapp.com/creativeView?adtype=VGA5441T130_YouTube_1920x1080]]>
+                            </Tracking>
+                            <Tracking event="start">
+                                <![CDATA[https://kmv-tags.herokuapp.com/start?adtype=VGA5441T130_YouTube_1920x1080]]>
+                            </Tracking>
+                            <Tracking event="skip">
+                                <![CDATA[https://kmv-tags.herokuapp.com/skip?adtype=VGA5441T130_YouTube_1920x1080]]>
+                            </Tracking>
+                            <Tracking event="progress" offset="00:00:30.000">
+                                <![CDATA[https://kmv-tags.herokuapp.com/progress?adtype=VGA5441T130_YouTube_1920x1080]]>
+                            </Tracking>
+                            <Tracking event="firstQuartile">
+                                <![CDATA[https://kmv-tags.herokuapp.com/firstQuartile?adtype=VGA5441T130_YouTube_1920x1080]]>
+                            </Tracking>
+                            <Tracking event="midpoint">
+                                <![CDATA[https://kmv-tags.herokuapp.com/midpoint?adtype=VGA5441T130_YouTube_1920x1080]]>
+                            </Tracking>
+                            <Tracking event="thirdQuartile">
+                                <![CDATA[https://kmv-tags.herokuapp.com/thirdQuartile?adtype=VGA5441T130_YouTube_1920x1080]]>
+                            </Tracking>
+                            <Tracking event="complete">
+                                <![CDATA[https://kmv-tags.herokuapp.com/complete?adtype=VGA5441T130_YouTube_1920x1080]]>
+                            </Tracking>
+                            <Tracking event="mute">
+                                <![CDATA[https://kmv-tags.herokuapp.com/mute?adtype=VGA5441T130_YouTube_1920x1080]]>
+                            </Tracking>
+                            <Tracking event="unmute">
+                                <![CDATA[https://kmv-tags.herokuapp.com/unmute?adtype=VGA5441T130_YouTube_1920x1080]]>
+                            </Tracking>
+                            <Tracking event="pause">
+                                <![CDATA[https://kmv-tags.herokuapp.com/pause?adtype=VGA5441T130_YouTube_1920x1080]]>
+                            </Tracking>
+                            <Tracking event="fullscreen">
+                                <![CDATA[https://kmv-tags.herokuapp.com/fullscreen?adtype=VGA5441T130_YouTube_1920x1080]]>
+                            </Tracking>
+                        </TrackingEvents>
+                        <VideoClicks>
+                            <ClickThrough>
+                                <![CDATA[https://vw.com]]>
+                            </ClickThrough>
+                        </VideoClicks>
+                        <MediaFiles>
+                            <MediaFile id="367835444" height="1080" width="1920" bitrate="470" type="video/mp4" delivery="progressive" maintainAspectRatio="true" scalable="true">
+                                <![CDATA[https://mastergiac.github.io/vast/ad_vast_10s.mp4]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>
